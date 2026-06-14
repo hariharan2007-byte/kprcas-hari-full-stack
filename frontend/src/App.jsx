@@ -1,11 +1,17 @@
 import React from 'react'
-import parent from './component/Parent'
-
+import Parent from './pages/Parent'
+import State from './pages/State'
+import Navbar from './pages/Navbar'
+import {Routes,Route} from 'react-router-dom'
 const App = () => {
   return (
     <>
-    <div>App</div>
-    <h1>Hello world</h1>
+    <Navbar/>
+    <Routes>
+      <Route path='/' element={<Parent/>}></Route>
+      <Route path='/useState' element={<State/>}/>
+    </Routes>
+    
     </>
   
 )
